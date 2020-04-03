@@ -1,6 +1,6 @@
-## Welcome to GitHub Pages
+## PICOTSA - The Photo Editing Application
 
-You can use the [editor on GitHub](https://github.com/sainiharit/PICTOSA/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+PICTOSA is a photo editing android application. This application consists of some basic editing tools like cropping & rotating the image, adjusting brightness, contrast & grayscale, applying filters to the image and many more
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
@@ -23,7 +23,7 @@ Syntax highlighted code block
 
 **Bold** and _Italic_ and `Code` text
 
-[Link](url) and ![Image](src)
+[Link](url) and ![Image](D:\Desktop\New folder\Screenshot_20200404_021648.jpg)
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
