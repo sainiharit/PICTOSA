@@ -1,4 +1,4 @@
-# PICOTSA - The Photo Editing Application
+# PICTOSA - The Photo Editing Application
 
 ### PICTOSA is a photo editing android application. This application consists of some basic editing tools like cropping & rotating the image, adjusting brightness, contrast & grayscale, applying filters to the image and many more
 <hr>
