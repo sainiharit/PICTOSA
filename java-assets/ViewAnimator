@@ -1,0 +1,59 @@
+import android.os.Bundle
+import android.view.View
+import android.view.animation.AnimationUtils
+import android.widget.Button
+import android.widget.ImageView
+import android.widget.ViewAnimator
+import androidx.appcompat.app.AppCompatActivity
+
+class MainActivity : AppCompatActivity() {
+
+	private var simpleViewAnimator1: ViewAnimator? = null
+	var buttonNext: Button? = null
+
+	// array of images, here taking metal images
+	var availableImages = intArrayOf(R.drawable.gold, R.drawable.silver, R.drawable.platinum,
+			R.drawable.copper, R.drawable.aluminium)
+
+	override fun onCreate(savedInstanceState: Bundle?) {
+		super.onCreate(savedInstanceState)
+		setContentView(R.layout.activity_main)
+
+		// get The references of Button and ViewAnimator
+		buttonNext = findViewById<View>(R.id.btnNext) as Button
+
+		// get the reference of ViewAnimator
+		simpleViewAnimator1 = findViewById<View>(R.id.simpleViewAnimator1) as ViewAnimator
+
+		for (i in availableImages.indices) {
+			// create a new object for ImageView by this way
+			val imgView = ImageView(applicationContext)
+
+			// Let us set image resource for ImageView
+			imgView.setImageResource(availableImages[i])
+
+			// Then add the child view in ViewAnimator
+			simpleViewAnimator1!!.addView(imgView)
+		}
+
+		// Declare in and out animations and load them using AnimationUtils class
+		val animationIn = AnimationUtils.loadAnimation(this, android.R.anim.slide_in_left)
+		val animationOut = AnimationUtils.loadAnimation(this, android.R.anim.slide_out_right)
+
+		// set the animation type to ViewAnimator
+		simpleViewAnimator1!!.inAnimation = animationIn
+		simpleViewAnimator1!!.outAnimation = animationOut
+
+		// set false value for setAnimateFirstView, but this is ultimately your choice
+		simpleViewAnimator1!!.animateFirstView = false
+
+		// Let us write ClickListener for NEXT button
+		// The current view will go out and next view will come in with
+		// specified animation
+		buttonNext!!.setOnClickListener {
+			// TODO Auto-generated method stub
+			// show the next view of ViewAnimator `	 `
+			simpleViewAnimator1!!.showNext()
+		}
+	}
+}
