@@ -56,4 +56,22 @@ class MainActivity : AppCompatActivity() {
 			simpleViewAnimator1!!.showNext()
 		}
 	}
+	
+	<TableLayout
+   xmlns:android=”http://schemas.android.com/apk/res/android”
+   android:layout_height=”fill_parent”
+   android:layout_width=”fill_parent” >
+   
+   <TableRow>
+      <TextView
+         android:text=”User Name:”
+         android:width =”120dp”
+         />
+      
+      <EditText
+         android:id=”@+id/txtUserName”
+         android:width=”200dp” />
+   </TableRow>
+   
+</TableLayout>
 }
